@@ -14,23 +14,11 @@ return require('packer').startup(function(use)
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
+	  'shaunsingh/nord.nvim',
+	  as = 'nord',
 	  config = function()
-		  vim.cmd('colorscheme rose-pine')
+		  vim.cmd('colorscheme nord')
 	  end
-  })
-
-  use({
-      "folke/trouble.nvim",
-      config = function()
-          require("trouble").setup {
-              icons = false,
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the configuration section below
-          }
-      end
   })
 
   use {
@@ -68,10 +56,11 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
-  use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
+  ---use("folke/zen-mode.nvim")
+  ---use("eandrju/cellular-automaton.nvim")
+  ---use("laytan/cloak.nvim")
+  use('github/copilot.vim')
+
 
 end)
 
